@@ -1,63 +1,63 @@
-const equipe = ["André Luiz","Arthur","Breno","Carlos Eduardo","Cauã","Davi","Davi","Eduardo","Emerson","Erick","Eris","Ezequiel","Felipe","Francisco","Gabrielly","Guilherme","Gustavo Alexandre","Gustavo Augusto","Heloa","Isabelle","Ivaneide","Jayme","Jorge","João Pedro","João Vitor","Kaio","Luis Otávio","Layson","Lorenzzo","Lucas","Lucas Matheus","Luis Gustavo","Luiz","Magsdene","Marco Antônio","Mateus","Nickson","Octavio","Otávio","Patrick","Pedro Junio","Rafael","Victor Hugo","Victor Hugo","Vinícius","Willky"];
+const laEle1 = ["André Luiz","Arthur","Breno","Carlos Eduardo","Cauã","Davi","Davi","Eduardo","Emerson","Erick","Eris","Ezequiel","Felipe","Francisco","Gabrielly","Guilherme","Gustavo Alexandre","Gustavo Augusto","Heloa","Isabelle","Ivaneide","Jayme","Jorge","João Pedro","João Vitor","Kaio","Luis Otávio","Layson","Lorenzzo","Lucas","Lucas Matheus","Luis Gustavo","Luiz","Magsdene","Marco Antônio","Mateus","Nickson","Octavio","Otávio","Patrick","Pedro Junio","Rafael","Victor Hugo","Victor Hugo","Vinícius","Willky"];
 
 function mostrar(id, linhas) {
   document.getElementById(id).textContent = linhas.join("\n");
 }
 
 function ex2() {
-  const equipeEstoque = ["Ezequiel", "Pedro Junio"];
-  equipeEstoque.push("Nickson");
-  const saiu = equipeEstoque.pop();
-  mostrar("out2", ["Saiu: " + JSON.stringify(saiu), "Equipe final: " + JSON.stringify(equipeEstoque)]);
+  const laEle2 = ["Ezequiel", "Pedro Junio"];
+  laEle2.push("Nickson");
+  const laEle3 = laEle2.pop();
+  mostrar("out2", ["Saiu: " + JSON.stringify(laEle3), "Equipe final: " + JSON.stringify(laEle2)]);
 }
 
 function ex5() {
-  const novatos = ["patrick", "magsdene", "willky"];
-  const crachas = novatos.map(nome => "CRACHÁ • " + nome.toUpperCase());
-  mostrar("out5", [JSON.stringify(crachas)]);
+  const laEle4 = ["patrick", "magsdene", "willky"];
+  const laEle5 = laEle4.map(laEle6 => "CRACHÁ • " + laEle6.toUpperCase());
+  mostrar("out5", [JSON.stringify(laEle5)]);
 }
 
 function ex7() {
-  const apresentacoes = ["Isabelle", "Francisco", "Guilherme"];
-  const ordem = apresentacoes.map((nome, i) => (i + 1) + "º - " + nome);
-  mostrar("out7", [JSON.stringify(ordem)]);
+  const laEle7 = ["Isabelle", "Francisco", "Guilherme"];
+  const laEle8 = laEle7.map((laEle9, laEle10) => (laEle10 + 1) + "º - " + laEle9);
+  mostrar("out7", [JSON.stringify(laEle8)]);
 }
 
 function ex9() {
-  const bolosPorDia = [32, 18, 25, 40, 12, 27];
-  mostrar("out9", [JSON.stringify(bolosPorDia.filter(qtd => qtd >= 25))]);
+  const laEle11 = [32, 18, 25, 40, 12, 27];
+  mostrar("out9", [JSON.stringify(laEle11.filter(laEle12 => laEle12 >= 25))]);
 }
 
 function ex11() {
-  const horasExtras = [6, 2, 8, 0, 5, 7, 3, 9, 4, 10, 1, 6, 0, 12, 5, 2];
-  mostrar("out11", [JSON.stringify(horasExtras.filter(horas => horas >= 5 && horas <= 10))]);
+  const laEle13 = [6, 2, 8, 0, 5, 7, 3, 9, 4, 10, 1, 6, 0, 12, 5, 2];
+  mostrar("out11", [JSON.stringify(laEle13.filter(laEle14 => laEle14 >= 5 && laEle14 <= 10))]);
 }
 
 function ex13() {
-  const nickson = equipe.find(nome => nome.startsWith("Nic"));
-  const ze = equipe.find(nome => nome.startsWith("Zé"));
-  mostrar("out13", ["Busca por Nic: " + JSON.stringify(nickson), "Busca por Zé: " + (ze === undefined ? "Crachá não pertence a ninguém da equipe" : ze)]);
+  const laEle15 = laEle1.find(laEle16 => laEle16.startsWith("Nic"));
+  const laEle17 = laEle1.find(laEle18 => laEle18.startsWith("Zé"));
+  mostrar("out13", ["Busca por Nic: " + JSON.stringify(laEle15), "Busca por Zé: " + (laEle17 === undefined ? "Crachá não pertence a ninguém da equipe" : laEle17)]);
 }
 
 function ex15() {
-  const equipeAcougue = ["Otávio", "Gustavo Augusto", "Pedro Junio"];
-  const usandoLuva = [true, true, false];
-  const todos = usandoLuva.every(valor => valor);
-  const alguem = usandoLuva.some(valor => valor === false);
-  const posicao = usandoLuva.findIndex(valor => valor === false);
-  mostrar("out15", ["Todos estão de luva: " + todos, "Alguém esqueceu: " + alguem, "Posição: " + posicao, "Funcionário: " + equipeAcougue[posicao]]);
+  const laEle19 = ["Otávio", "Gustavo Augusto", "Pedro Junio"];
+  const laEle20 = [true, true, false];
+  const laEle21 = laEle20.every(laEle22 => laEle22);
+  const laEle23 = laEle20.some(laEle24 => laEle24 === false);
+  const laEle25 = laEle20.findIndex(laEle26 => laEle26 === false);
+  mostrar("out15", ["Todos estão de luva: " + laEle21, "Alguém esqueceu: " + laEle23, "Posição: " + laEle25, "Funcionário: " + laEle19[laEle25]]);
 }
 
 function ex17() {
-  const vaquinha = [10, 15, 20, 5, 10];
-  const arrecadado = vaquinha.reduce((total, valor) => total + valor, 0);
-  mostrar("out17", ["Arrecadado: R$ " + arrecadado, "Faltam: R$ " + (80 - arrecadado)]);
+  const laEle27 = [10, 15, 20, 5, 10];
+  const laEle28 = laEle27.reduce((laEle29, laEle30) => laEle29 + laEle30, 0);
+  mostrar("out17", ["Arrecadado: R$ " + laEle28, "Faltam: R$ " + (80 - laEle28)]);
 }
 
 function ex19() {
-  const plantoes = ["Emerson", "Jorge", "Emerson", "Eris", "Jorge", "Emerson", "Rafael"];
-  const contagem = nome => plantoes.reduce((total, plantao) => total + (plantao === nome ? 1 : 0), 0);
-  mostrar("out19", ["Emerson: " + contagem("Emerson"), "Jorge: " + contagem("Jorge")]);
+  const laEle31 = ["Emerson", "Jorge", "Emerson", "Eris", "Jorge", "Emerson", "Rafael"];
+  const laEle32 = laEle33 => laEle31.reduce((laEle34, laEle35) => laEle34 + (laEle35 === laEle33 ? 1 : 0), 0);
+  mostrar("out19", ["Emerson: " + laEle32("Emerson"), "Jorge: " + laEle32("Jorge")]);
 }
 
 function executarTodos() {
